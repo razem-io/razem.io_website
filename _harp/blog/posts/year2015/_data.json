@@ -1,0 +1,10 @@
+{
+  "0819_try_catch_lambda": {
+    "title": "How to try and catch in a lambda expression?",
+    "date" : "1439987657234"
+  },
+  "0611_getOrDefault_vs_computeIfAbsent": {
+    "title": "Java 8: getOrDefault vs computeIfAbsent",
+    "date" : "1434053480791"
+  }
+}

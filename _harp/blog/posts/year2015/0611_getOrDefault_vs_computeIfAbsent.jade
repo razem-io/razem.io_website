@@ -1,0 +1,33 @@
+block head
+  script(src="/bower_components/prism/prism.js")
+  script(src="/bower_components/prism/components/prism-java.js")
+
+h2 getOrDefault vs computeIfAbsent
+
+:markdown
+  Lately I had an discussion about Maps in Java 8 on [stackoverflow](http://stackoverflow.com/questions/30734053/pass-a-hashmap-by-reference/30734711#30734711). To my surprise I used the function [getOrDefault](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html#getOrDefault-java.lang.Object-V-) wrong. Every time I checked for a key in a Map, where I was not sure if the map already contains the key, but wanted to prevent a null pointer I did the following:
+
+  ```java
+  @NotNull
+  public List<String> getRandomList(String key){
+    return map.getOrDefault(key, new ArrayList<>());
+  }
+  ```
+
+  This actually works great. But if you think about it, you will always create a new `ArrayList` each time you call the method even if the key is found in the map. Lucky for us Java 8 already provides a solution for that scenario. I just have to use this method instead:
+
+  ```java
+  @NotNull
+  public List<String> getRandomList(String key){
+    return map.computeIfAbsent(key, s -> new ArrayList<>());
+  }
+  ```
+
+  Now no new Object is created but a lambda is passed. *Great success!* But what is `getOrDefault` good for? Use it only in conjunction with Java primitives:
+
+  ```java
+  @NotNull
+  public Integer getRandomInteger(String key){
+    return map.getOrDefault(key, 0);
+  }
+  ```

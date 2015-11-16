@@ -1,0 +1,39 @@
+block head
+  script(src="/bower_components/prism/prism.js")
+  script(src="/bower_components/prism/components/prism-java.js")
+
+h2
+  span(class="oi oi-bar-chart" title="bar-chart")
+  p Bitty History
+  span(class="oi oi-github" title="bar-chart")
+
+h3 Info:
+:markdown
+  Github [https://github.com/razem-io/BittyHistory](https://github.com/razem-io/BittyHistory)
+
+h3 Description:
+:markdown
+  A library which will aid in retrieving and storing data from bitcoincharts.com. [MapDB](https://github.com/jankotek/MapDB) is used in order to be fast and access data without using to much memory.
+
+h3 Usage:
+:markdown
+  Look here what symbol you need: http://api.bitcoincharts.com/v1/csv/
+
+  For example if you want to get the history data for the kraken exchange in € the following would apply:
+
+  ```java
+  BHistory bHistory = new BHistory("krakenEUR");
+  bHistory.addStatusListener(new BHistory.BHistoryStatusListener() {
+      @Override
+      public void onFinish() {
+          Iterator<HistoryEntry> historyEntries = bHistory.getHistoryEntries();
+          historyEntries.forEachRemaining(entry -> System.out.println(entry.toString()));
+      }
+
+      @Override
+      public void onUpdate() {}
+
+      @Override
+      public void onError() {}
+  });
+  ```

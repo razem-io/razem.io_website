@@ -1,0 +1,106 @@
+block head
+  script(src="/bower_components/prism/prism.js")
+  script(src="/bower_components/prism/components/prism-java.js")
+
+h2 How to try and catch in a lambda expression?
+
+:markdown
+  Today I got a question on
+  [stackoverflow](href='http://stackoverflow.com/a/26215931/1029251') asking why
+  the following doesn't work:
+
+  ```java
+  public LambdaCatchExceptionClass() {
+      try {
+          List<File> filesInFolder = Files.walk(Paths.get("/path/to/folder"))
+                  .filter(Files::isRegularFile)
+                  .filter(Files::isHidden)
+                  .map(Path::toFile)
+                  .collect(Collectors.toList());
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+  }
+  ```
+
+  Instead it throws an compiler error saying: `incompatible thrown types
+  java.io.IOException in method reference`
+
+
+  But we already try to catch this right? The Lambda is within the catch block!
+  Sadly this is not true. With a lambda you pass a function reference (in this
+  case `Files::isHidden`) which does not get executed in the current block. How
+  to catch the Exception then? A solution would be:
+
+  ```java
+  .filter(Files::isRegularFile)
+  .filter(f -> {
+      try {
+          return Files.isHidden(f);
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+      return false;
+  })
+  .map(Path::toFile)
+  .collect(Collectors.toList());
+  ```
+
+  However this is ugly to read. Any other idea? See below:
+
+  ```java
+  public LambdaCatchExceptionClass() {
+      try {
+          List<File> filesInFolder = Files.walk(Paths.get("/path/to/folder"))
+                  .filter(Files::isRegularFile)
+                  .filter(LambdaCatchExceptionClass::isHidden)
+                  .map(Path::toFile)
+                  .collect(Collectors.toList());
+          System.out.println();
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+  }
+
+  public static boolean isHidden(Path path){
+      try {
+          return Files.isHidden(path);
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+      return false;
+  }
+  ```
+
+  This is more easy to read. But do you need to write a static method for any exception you want to catch in a lambda? With the help of generics and an awesome library you sure do not need to do that. My final solution:
+
+  ```java
+  package com.stackoverflow.examples;
+
+  import java.io.File;
+  import java.io.IOException;
+  import java.nio.file.Files;
+  import java.nio.file.Path;
+  import java.nio.file.Paths;
+  import java.util.List;
+  import java.util.stream.Collectors;
+  import com.diffplug.common.base.Errors;
+
+  public class LambdaCatchExceptionClass {
+      public LambdaCatchExceptionClass() throws IOException {
+              List<File> filesInFolder = Files.walk(Paths.get("/path/to/folder"))
+                      .filter(Files::isRegularFile)
+                      .filter(Errors.suppress().wrapWithDefault(Files::isHidden, false))
+                      .map(Path::toFile)
+                      .collect(Collectors.toList());
+              System.out.println();
+          }
+      }
+
+      public static void main(String[] args) throws IOException {
+          new LambdaCatchExceptionClass();
+      }
+  }
+  ```
+
+  The library I used here is called [Durian](https://github.com/diffplug/durian) and calls itself "Guava's spikier (unofficial) cousin". It contains alot of useful utility functions which safe you alot of time.
