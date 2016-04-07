@@ -1,4 +1,8 @@
 h1 dev blog
+h2 2016
+each article, slug in public.blog.y2016._data
+	p: a(href="/blog/y2016/#{ slug }.html") #{ article.date } - #{ article.title }
+h2 2015
 each article, slug in public.blog.y2015._data
 	p: a(href="/blog/y2015/#{ slug }.html") #{ article.date } - #{ article.title }
 h1 projects

@@ -14,7 +14,8 @@
     "node_modules",
     "_components",
     "test",
-    "tests"
+    "tests",
+    "**/*.less"    
   ],
   "dependencies": {
     "font-awesome": "~4.4.0",
