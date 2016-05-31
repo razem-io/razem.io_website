@@ -21,7 +21,6 @@
     "font-awesome": "~4.4.0",
     "bootswatch-dist": "3.3.5-yeti",
     "prism": "~1.2.0",
-    "video.js": "videojs#^5.10.3",
-    "blueimp-gallery": "^2.21.2"
+    "magnific-popup": "^1.1.0"
   }
 }
