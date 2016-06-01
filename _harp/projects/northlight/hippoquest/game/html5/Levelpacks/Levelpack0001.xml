@@ -1,0 +1,154 @@
+  <?xml version="1.0" encoding="utf-8" ?> 
+- <levelpack name="Earth" levels="20">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="12" y="4" width="3" height="1" angle="0" restitution="0.2" density="0" /> 
+  <form type="Movable Box" x="12" y="4" width="3" height="1" angle="0" restitution="0.2" density="1" /> 
+  <form type="Static Circle" x="6" y="5" radius="1" density="0" /> 
+  <form type="Movable Circle" x="6" y="5" radius="1" density="0.2" /> 
+  <form type="Static Bumper" x="12" y="4" width="3" height="1" angle="0" restitution="1.0" /> 
+  <form type="Dynamic Chain" x="12" y="4" chainSequence="1.0" /> 
+  <form type="Movable Triangle" x="12" y="4" width="3" height="1" angle="0" /> 
+  <form type="Static Triangle" x="12" y="4" width="3" height="1" angle="0" /> 
+  <form type="Static Sensor" x="12" y="4" width="3" height="1" angle="0" art="0" parameter="0" /> 
+  <form type="Target" x="13" y="2" radius="1" /> 
+- <level number="01" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="12" y="4" width="3" height="1" /> 
+  <form type="Static Circle" x="6" y="5" radius="1" /> 
+  <form type="Target" x="13" y="2" radius="1" /> 
+  </level>
+- <level number="02" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="12" y="4" width="3" height="1" /> 
+  <form type="Static Circle" x="6" y="3" radius="1" /> 
+  <form type="Target" x="13" y="2" radius="1" /> 
+  </level>
+- <level number="03" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="12" y="4" width="3" height="1" /> 
+  <form type="Static Box" x="10" y="2" width="1" height="1" /> 
+  <form type="Target" x="13" y="2" radius="1" /> 
+  </level>
+- <level number="04" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Circle" x="6" y="5" radius="1" /> 
+  <form type="Static Circle" x="6" y="1" radius="1" /> 
+  <form type="Static Box" x="12" y="8" width="3" height="1" /> 
+  <form type="Target" x="13" y="6" radius="1" /> 
+  </level>
+- <level number="19" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="10" y="7" width="0.5" height="4" angle="0" restitution="0.2" density="0" /> 
+  <form type="Movable Box" x="10" y="2" width="0.5" height="1.5" angle="0" restitution="0.2" density="1" /> 
+  <form type="Target" x="12" y="8.8" radius="1" /> 
+  </level>
+- <level number="05" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="9" y="1" width="1" height="2" /> 
+  <form type="Static Box" x="9" y="7" width="1" height="2.8" /> 
+  <form type="Target" x="13" y="8.7" radius="1" /> 
+  </level>
+- <level number="07" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="7" y="8.3" width="1" height="1.3" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="13" y="8.3" width="1" height="1.3" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="9" y="6" width="2" height="1" angle="0" restitution="0.2" density="0" /> 
+  <form type="Target" x="10" y="8.8" radius="1" /> 
+  </level>
+- <level number="17" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="9" y="4" width="4" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Movable Circle" x="6" y="3" radius="0.8" density="0.2" /> 
+  <form type="Movable Circle" x="10" y="3" radius="0.8" density="0.2" /> 
+  <form type="Movable Circle" x="12" y="3" radius="0.8" density="0.2" /> 
+  <form type="Target" x="8" y="2.8" radius="0.8" /> 
+  </level>
+- <level number="13" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="10.5" y="3" width="1" height="0.5" angle="-1" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="6.5" y="3" width="1" height="0.5" angle="1" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="10" y="7" width="0.5" height="3" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="7" y="7" width="0.5" height="3" angle="0" restitution="0.2" density="0" /> 
+  <form type="Target" x="8.5" y="8.8" radius="1" /> 
+  </level>
+- <level number="15" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="14" y="3" width="3" height="0.5" angle="0.5" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="12" y="4" width="0.5" height="0.5" angle="0.5" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="11" y="6" width="0.5" height="0.5" angle="0.5" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="10" y="8" width="0.5" height="0.5" angle="0.5" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="9.7" y="10" width="3" height="0.5" angle="0.5" restitution="0.5" density="0" /> 
+  <form type="Target" x="12" y="8.8" radius="1" /> 
+  </level>
+- <level number="18" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="10" y="3" width="3" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="10" y="6" width="3" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Movable Box" x="8" y="5" width="1" height="1" angle="0" restitution="0.2" density="1" /> 
+  <form type="Movable Circle" x="10" y="4.5" radius="1" density="0.2" /> 
+  <form type="Target" x="12" y="4.8" radius="1" /> 
+  </level>
+- <level number="06" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="14" y="9" width="3" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Target" x="13" y="7.8" radius="1" /> 
+  <form type="Dynamic Chain" x="8.5" y="0" chainSequence="6" /> 
+  </level>
+- <level number="09" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="9" y="6.5" width="0.5" height="3" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="11" y="5.5" width="0.5" height="2" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="13.8" y="6.5" width="2.5" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Target" x="13" y="9" radius="1" /> 
+  </level>
+- <level number="14" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="6.2" y="8" width="0.5" height="2" angle="0.8" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="12" y="8" width="0.5" height="3" angle="2.1" restitution="0.2" density="0" /> 
+  <form type="Dynamic Chain" x="8.5" y="0" chainSequence="5" /> 
+  <form type="Target" x="8.5" y="9" radius="1" /> 
+  </level>
+- <level number="16" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="14" y="3" width="3" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="12" y="5" width="0.5" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="12" y="7" width="0.5" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="12" y="9" width="0.5" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Target" x="15" y="8.8" radius="1" /> 
+  </level>
+- <level number="11" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="12" y="8" width="3" height="0.5" angle="1" restitution="0.2" density="0" /> 
+  <form type="Dynamic Chain" x="8.5" y="0" chainSequence="4" /> 
+  <form type="Target" x="15" y="8.8" radius="1" /> 
+  </level>
+- <level number="21" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Movable Box" x="9" y="4" width="2.5" height="0.2" angle="0" restitution="0.2" density="1" /> 
+  <form type="Static Box" x="8" y="7" width="0.5" height="3" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="11" y="7" width="0.5" height="3" angle="0" restitution="0.2" density="0" /> 
+  <form type="Target" x="9" y="9" radius="1" /> 
+  </level>
+- <level number="08" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="7" y="8.3" width="1" height="1.3" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="13" y="8.3" width="1" height="1.3" angle="0" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="10" y="6" width="1" height="1" angle="0" restitution="0.2" density="0" /> 
+  <form type="Target" x="10" y="8.8" radius="1" /> 
+  </level>
+- <level number="10" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="12" y="8.8" width="3" height="0.5" angle="0" restitution="0.2" density="0" /> 
+  <form type="Dynamic Chain" x="8.5" y="0" chainSequence="5" /> 
+  <form type="Dynamic Chain" x="4" y="0" chainSequence="5" /> 
+  <form type="Target" x="12" y="5.8" radius="1" /> 
+  </level>
+- <level number="12" okay="5" good="2" super="1">
+  <form type="Static Background" /> 
+  <form type="Static Box" x="3" y="2" width="3" height="0.5" angle="0.5" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="12" y="1" width="3" height="0.5" angle="-0.5" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="12" y="7" width="3" height="0.5" angle="0.5" restitution="0.2" density="0" /> 
+  <form type="Static Box" x="5.6" y="2.3" width="0.5" height="0.5" angle="0.5" restitution="0.2" density="0" /> 
+  <form type="Target" x="4.6" y="1.3" radius="1" /> 
+  </level>
+  </levelpack>

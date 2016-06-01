@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<levelpack name="Julians Pack" levels="20">
+	<form type="Static Background"></form>
+	<form type="Static Box" x="12" y="4" width="3" height="1" angle="0" restitution="0.2" density="0"></form>
+	<form type="Movable Box" x="12" y="4" width="3" height="1" angle="0" restitution="0.2" density="1"></form>
+	<form type="Static Circle" x="6" y="5" radius="1" density="0"></form>
+	<form type="Movable Circle" x="6" y="5" radius="1" density="0.2"></form>
+	<form type="Static Bumper" x="12" y="4" width="3" height="1" angle="0" restitution="1.0"></form>
+	<form type="Dynamic Chain" x="12" y="4" chainSequence="1.0"></form>
+	<form type="Movable Triangle" x="12" y="4" width="3" height="1" angle="0"></form>
+	<form type="Static Triangle" x="12" y="4" width="3" height="1" angle="0"></form>
+	<form type="Static Sensor" x="12" y="4" width="3" height="1" angle="0" art="0" parameter="0"></form>
+	<form type="Target" x="13" y="2" radius="1"></form>
+	
+	<level number="1" okay="5" good="2" super="1">
+		<form type="Static Background"></form>
+		<form type="Static Box" x="8" y="7" width="0.2" height="4.5" angle="0" restitution="0.2" density="0"></form>
+        <form type="Static Box" x="10.5" y="7" width="0.2" height="3" angle="0" restitution="0.2" density="0"></form>
+        <form type="Static Box" x="11.88" y="2.75" width="0.2" height="2" angle="0.8" restitution="0.2" density="0"></form>
+        <form type="Movable Circle" x="8" y="2" radius="0.7" density="0.2"></form>
+		<form type="Target" x="9.25" y="9" radius="1"></form>
+	</level>
+	<level number="2" okay="5" good="2" super="1">
+		<form type="Static Background"></form>
+        <form type="Static Box" x="2.5" y="3" width="2.5" height="0.2" angle="0" restitution="0.2" density="0"></form>
+        <form type="Static Box" x="14.5" y="6" width="3.5" height="0.2" angle="0" restitution="0.2" density="0"></form>
+        <form type="Static Box" x="14.5" y="3" width="2.5" height="0.2" angle="-0.6" restitution="0.2" density="0"></form>
+		<joint type="XPrisJoint" limit="true" motor="false" lower="-2.0" upper="2.0" speed="-1.0" force="50.0">
+			<form type="Movable Box" x="8" y="4.5" width="1" height="1.7" angle="0" restitution="0.2" density="1"></form>
+		</joint>
+		<form type="Target" x="14.5" y="5" radius="1"></form>
+	</level>
+	<level number="3" okay="5" good="2" super="1">
+		<form type="Static Background"></form>
+		<form type="Static Box" x="8" y="2.5" width="2.5" height="0.2" angle="0" restitution="0.2" density="0"></form>
+        <form type="Static Box" x="13.5" y="7" width="0.2" height="3" angle="0" restitution="0.2" density="0"></form>
+        <form type="Movable Box" x="14" y="3.8" width="2" height="0.2" angle="0" restitution="0.2" density="1"></form>
+		<form type="Static Box" x="15.8" y="4.2" width="0.2" height="0.2" angle="0" restitution="0.2" density="0"></form>
+        <form type="Movable Circle" x="8" y="1.3s" radius="1" density="0.2"></form>
+		<form type="Target" x="14.85" y="9" radius="1"></form>
+	</level>
+	<level number="4" okay="5" good="2" super="1">
+		<form type="Static Background"></form>
+        <form type="Static Box" x="10.5" y="7" width="0.2" height="3" angle="0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="12.3" y="4.2" width="1.8" height="0.2" angle="0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="14.3" y="3.5" width="0.2" height="0.9" angle="0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="15.7" y="0.5" width="1.2" height="0.7" angle="0" restitution="0.2" density="0"></form>
+        <joint type="YPrisJoint" limit="true" motor="false" lower="-2.0" upper="2.0" speed="-1.0" force="50.0">
+			<form type="Movable Box" x="12.4" y="0" width="2.09" height="0.7" angle="0" restitution="0.2" density="1"></form>
+		</joint>
+		<form type="Static Sensor" x="8.7" y="8" width="1" height="1" angle="0" art="4" parameter="0"></form>
+		<form type="Target" x="14.85" y="9" radius="1"></form>
+	</level>
+	<level number="5" okay="5" good="2" super="1">
+		<form type="Static Background"></form>
+		
+		<form type="Static Sensor" x="14" y="6" width="0.8" height="0.8" angle="0" art="5" parameter="-100"></form>
+		<form type="Static Sensor" x="2" y="2" width="1" height="1" angle="0" art="4" parameter="0"></form>
+		<form type="Static Bumper" x="14" y="0.3" width="2" height="0.4" angle="0" restitution="1.0"></form>
+        <form type="Static Box" x="8" y="7" width="0.2" height="1" angle="0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="9.6" y="6.2" width="1.8" height="0.2" angle="0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="8.8" y="8.2" width="1.0" height="0.2" angle="0" restitution="0.2" density="0"></form>
+		
+		<form type="Target" x="9" y="7.3" radius="0.7"></form>
+	</level>
+	<level number="6" okay="5" good="2" super="1">
+		<form type="Static Background"></form>
+		
+		<form type="Static Sensor" x="13" y="6" width="0.8" height="0.8" angle="0" art="5" parameter="-120"></form>
+		<form type="Static Sensor" x="2" y="2" width="1" height="1" angle="0" art="4" parameter="0"></form>
+		<form type="Static Bumper" x="14.4" y="1.6" width="2" height="0.4" angle="0.8" restitution="1.4"></form>
+        <form type="Static Box" x="5" y="8.2" width="0.2" height="1.5" angle="0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="6.4" y="6.8" width="1.6" height="0.2" angle="0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="9" y="5.7" width="1.6" height="0.2" angle="-0.8" restitution="0.0" density="0"></form>
+		<form type="Static Box" x="7.8" y="9" width="0.2" height="0.6" angle="0" restitution="0.2" density="0"></form>
+		
+		<form type="Target" x="6.2" y="9" radius="0.7"></form>
+	</level>
+	<level number="7" okay="5" good="2" super="1">
+		<form type="Static Background"></form>
+		
+		<form type="Static Sensor" x="9" y="5" width="0.6" height="0.6" angle="0" art="5" parameter="120"></form>
+		<form type="Static Sensor" x="8" y="1.7" width="0.6" height="0.6" angle="0" art="5" parameter="-120"></form>
+		
+		<form type="Static Sensor" x="15.3" y="9" width="0.6" height="0.6" angle="0" art="5" parameter="-120"></form>
+		<form type="Static Sensor" x="13.3" y="9" width="0.6" height="0.6" angle="0" art="5" parameter="-120"></form>
+		
+		<form type="Static Sensor" x="2" y="2.5" width="1" height="1" angle="0" art="4" parameter="0"></form>
+		<form type="Static Sensor" x="5.2" y="7.3" width="1" height="1" angle="0" art="4" parameter="0"></form>
+		<form type="Static Bumper" x="14.6" y="1.05" width="1.6" height="0.4" angle="0.0" restitution="1.4"></form>
+		
+        <form type="Static Box" x="4.9" y="1.3" width="0.2" height="0.7" angle="0.6" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="4.55" y="2.5" width="0.2" height="0.7" angle="0.0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="4.9" y="3.7" width="0.2" height="0.7" angle="-0.6" restitution="0.2" density="0"></form>
+		
+		<form type="Static Box" x="11.9" y="3.0" width="0.2" height="0.7" angle="-0.6" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="12.25" y="4.2" width="0.2" height="0.7" angle="0.0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="11.9" y="5.4" width="0.2" height="0.7" angle="0.6" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="6.9" y="8.7" width="0.2" height="2.7" angle="0" restitution="0.2" density="0"></form>
+		
+		<form type="Static Box" x="9.1" y="0.85" width="4" height="0.2" angle="0.0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="9.2" y="2.55" width="2.5" height="0.2" angle="0.0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="7.7" y="4.2" width="2.5" height="0.2" angle="0.0" restitution="0.2" density="0"></form>
+		<form type="Static Box" x="9.2" y="5.9" width="2.5" height="0.2" angle="0.0" restitution="0.2" density="0"></form>
+		
+		<form type="Target" x="8.2" y="9" radius="0.7"></form>
+	</level>
+</levelpack>
