@@ -1,15 +1,15 @@
 block head
   link(rel="stylesheet" href="/js/magnific-popup/dist/magnific-popup.css")
 
-h2
+h1
   p G.E.A.R
-h3 Info
+h2 Info
 | G.E.A.R was designed and developed by a team of 6 students in the years 2010 to 2011. It was part of an assessment in the thrid and fourth semester.
-h3 Description
+h2 Description
 | G.E.A.R is a mix between a Jump 'n' Run, Puzzle and Platformer. With the help of complex riddles and skill parts it keeps the player entertained. The atmosphere is dark and heavily inspired by LIMBO.
-h3 Awards
+h2 Awards
 | Place 3 at the Game Forge Newcomer Awards 2011
-h3 Demo
+h2 Demo
 | If you are interested, you can play a demo of G.E.A.R. You need a Microsoft Windows or Apple OSX operating system.
 br
 br
@@ -25,7 +25,7 @@ div(class="dropdown")
       a(href="https://drive.google.com/open?id=0B7W6nOKmJ_Pca0NFTnVCaENxeXc")
         |Mac
   
-h3 Screenshots
+h2 Screenshots
 div(class="screenshots")
   - for (var i=1; i<69; i++)
     if(i < 10)
@@ -34,7 +34,7 @@ div(class="screenshots")
     else
       a(href="screenshots/screenshot.gear." + i + ".png" data-lightbox="screenshots")
         img(src="screenshots/thumbnails/screenshot.gear." + i + ".jpg")
-h3 Gameplay
+h2 Gameplay
 |<div class="embed-responsive embed-responsive-16by9">
 |<iframe src="https://drive.google.com/file/d/0B7W6nOKmJ_PcZnA4T2x5dFNEalE/preview"></iframe>
 |</div>
@@ -42,7 +42,7 @@ h3 Cinematic
 |<div class="embed-responsive embed-responsive-16by9">
 |<iframe src="https://drive.google.com/file/d/0B7W6nOKmJ_PcWUthU0JqUkhIcW8/preview"></iframe>
 |</div>
-h3 Team
+h2 Team
 div(id="team")
   - for (var i=3; i>0; i--)
     img(src="images/team" + i + ".jpg" class="img-responsive")

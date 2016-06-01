@@ -1,0 +1,37 @@
+block head
+  link(rel="stylesheet" href="/js/magnific-popup/dist/magnific-popup.css")
+
+h1
+  p Hippo Quest
+h2 Info
+| Hippo Quest was designed and developed by a team of 3 students in the year
+| 2011 within 3 months. It was part of an assessment in the fourth semester. 
+| With a strong focus on cross platform compatibility, the HAXE language in
+| combination with the OpenFL Framework was used. Which allows us to build
+| Hippo Quest for the following platforms: Windows, Mac, Linux, iOS, Android, 
+| BlackBerry, Firefox OS, Tizen, Flash and HTML5 with a single(!!!) code base.
+h2 Description
+| Hippo Quest is a casual game with real time physics. Its goal is to hit 
+| aliens with a special ball in order to save the hippo planet. It has several
+| levels (~30) with different physic modules and little riddels. 
+  
+h2 Screenshots
+div(class="screenshots")
+  div(class="row")
+    - for (var i=1; i<8; i++)
+      div(class="col-xs-6 col-md-3")
+        a(href="screenshots/screenshot.hippoquest." + i + ".jpg" data-lightbox="screenshots")
+          img(src="screenshots/thumbnails/screenshot.hippoquest." + i + ".jpg" class="img-thumbnail bottom5")
+h2 Let's play
+|<div class="embed-responsive embed-responsive-4by3">
+|<iframe src="igame/html5/bin"></iframe>
+|</div>
+
+script(src="/js/magnific-popup/dist/jquery.magnific-popup.min.js")
+script
+  |$('.screenshots').magnificPopup({
+  |delegate: 'a', // child items selector, by clicking on it popup will open
+  |type: 'image',
+  |gallery:{enabled:true},
+  |mainClass: 'mfp-with-zoom'
+  |});
